@@ -20,21 +20,22 @@ class AttributedTextViewController: UIViewController {
         detailDescriptionLabel.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
         
 
-        let firstAttributes: [NSAttributedString.Key: Any] =
-            [
-                .backgroundColor: UIColor.green,
-                NSAttributedString.Key.kern: 10
-            ]
-        let secondAttributes = [NSAttributedString.Key.foregroundColor: UIColor.red]
+        let firstString = "This is a simple "
+        let secondString = "link"
+        let thirdString = " out"
 
-        let firstString = NSMutableAttributedString(string: "Haters ", attributes: firstAttributes)
-        let secondString = NSAttributedString(string: "gonna ", attributes: secondAttributes)
-        let thirdString = NSAttributedString(string: "hate")
-        firstString.accessibilityAttributedHint = NSMutableAttributedString(string: "Link")
+        let fullText = "\(firstString)\(secondString)\(thirdString)"
+        
+        let fullAttributedText = NSMutableAttributedString(string: fullText, attributes: [.foregroundColor: UIColor.black])
+        let range = NSString(string: fullText).range(of: secondString)
+        fullAttributedText.addAttributes([.foregroundColor: UIColor.blue, .accessibilityTextCustom: "Linkout"], range: range)
+//        let accessibilityAttributedHint = NSMutableAttributedString(string: fullText)
+//        accessibilityAttributedHint.addAttributes([NSAttributedString.Key.accessibilityTextCustom: ""], range: range)
+//        fullAttributedText.accessibilityAttributedHint = accessibilityAttributedHint
 
-        firstString.append(secondString)
-        firstString.append(thirdString)
-        detailDescriptionLabel.attributedText = firstString
+        detailDescriptionLabel.attributedText = fullAttributedText
+        //detailDescriptionLabel.accessibilityTraits.insert(UIAccessibilityTraits.button)
+        detailDescriptionLabel.accessibilityAttributedHint = fullAttributedText
     }
 }
 
