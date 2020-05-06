@@ -35,7 +35,8 @@ class AttributedTextViewController: UIViewController {
 
         detailDescriptionLabel.attributedText = fullAttributedText
         //detailDescriptionLabel.accessibilityTraits.insert(UIAccessibilityTraits.button)
-        detailDescriptionLabel.accessibilityAttributedHint = fullAttributedText
+        let a11yText = NSMutableAttributedString(string: fullText + " Button")
+        detailDescriptionLabel.accessibilityAttributedLabel = a11yText
     }
 }
 
