@@ -1,0 +1,5 @@
+#import <Foundation/Foundation.h>
+@interface PodsDummy_Pods_AccessibilityTests_AccessibilityTestsUITests : NSObject
+@end
+@implementation PodsDummy_Pods_AccessibilityTests_AccessibilityTestsUITests
+@end

@@ -29,9 +29,6 @@ class AttributedTextViewController: UIViewController {
         let fullAttributedText = NSMutableAttributedString(string: fullText, attributes: [.foregroundColor: UIColor.black])
         let range = NSString(string: fullText).range(of: secondString)
         fullAttributedText.addAttributes([.foregroundColor: UIColor.blue, .accessibilityTextCustom: "Linkout"], range: range)
-//        let accessibilityAttributedHint = NSMutableAttributedString(string: fullText)
-//        accessibilityAttributedHint.addAttributes([NSAttributedString.Key.accessibilityTextCustom: ""], range: range)
-//        fullAttributedText.accessibilityAttributedHint = accessibilityAttributedHint
 
         detailDescriptionLabel.attributedText = fullAttributedText
         //detailDescriptionLabel.accessibilityTraits.insert(UIAccessibilityTraits.button)

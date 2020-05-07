@@ -1,0 +1,6 @@
+framework module Pods_AccessibilityTestsTests {
+  umbrella header "Pods-AccessibilityTestsTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

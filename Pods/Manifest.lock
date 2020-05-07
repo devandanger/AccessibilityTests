@@ -1,0 +1,16 @@
+PODS:
+  - Atributika (4.9.5)
+
+DEPENDENCIES:
+  - Atributika
+
+SPEC REPOS:
+  trunk:
+    - Atributika
+
+SPEC CHECKSUMS:
+  Atributika: 19429d34013b6d860feb5427c67bdbd219414e1f
+
+PODFILE CHECKSUM: a349bdce7cf25e52568d7f7a351a01327f923a18
+
+COCOAPODS: 1.9.1
